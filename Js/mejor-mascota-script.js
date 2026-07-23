@@ -6,9 +6,9 @@ const addRowBtn = document.getElementById('addRowBtn');
 // Nombre field: keep prefix "Nombre: " always
 footNombre.addEventListener('focus', () => {
   const text = footNombre.textContent;
-  if (text === 'Nombre: _________') {
+  if (text.startsWith('Nombre:')) {
     const range = document.createRange();
-    range.setStart(footNombre.childNodes[0], 9);
+    range.setStart(footNombre.childNodes[0], 8);
     range.setEnd(footNombre.childNodes[0], text.length);
     const sel = window.getSelection();
     sel.removeAllRanges();
@@ -16,9 +16,20 @@ footNombre.addEventListener('focus', () => {
   }
 });
 footNombre.addEventListener('blur', () => {
-  const text = footNombre.textContent;
-  if (!text.startsWith('Nombre:') || text.replace('Nombre:', '').trim() === '') {
-    footNombre.textContent = 'Nombre: _________';
+  let text = footNombre.textContent;
+  if (!text.startsWith('Nombre:')) {
+    text = 'Nombre: ' + text.replace(/Nombre:?\s*/gi, '');
+  }
+  if (text.replace('Nombre:', '').trim() === '') {
+    text = 'Nombre: _________';
+  }
+  footNombre.textContent = text;
+});
+footNombre.addEventListener('keydown', (e) => {
+  const sel = window.getSelection();
+  const range = sel.getRangeAt(0);
+  if (range.startOffset < 8 && e.key !== 'Tab') {
+    e.preventDefault();
   }
 });
 
