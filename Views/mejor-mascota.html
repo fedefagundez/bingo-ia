@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Vaca de apartamento - La mejor mascota</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Space+Grotesk:wght@500;600;700&family=Inter:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/html-to-image@1.11.11/dist/html-to-image.js"></script>
+<link rel="stylesheet" href="../Style/mejor-mascota.css">
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand">La mejor mascota <span class="ia">IA</span></div>
+    <div class="tagline">Plan Ceibal · Fundación Sadosky · Program.AR</div>
+  </header>
+
+  <div class="card-header">
+    <button class="back-btn" onclick="window.location.href='index.html'">← volver al inicio</button>
+    <div></div>
+  </div>
+
+  <p class="prompt">Diseña
+    <span>Diseñá las condiciones que debe cumplir un animal para ser la mascota perfecta.</span>
+  </p>
+
+  <div class="panel">
+    <div class="hint">Escribí en el recuadro del algoritmo las condiciones que debe cumplir la mascota.</div>
+  </div>
+
+  <div id="exportArea">
+    <div class="comic-panel">
+      <h2 class="comic-title" id="titleField">La mejor mascota</h2>
+      <div class="arrows">
+        <div class="arrow in">
+          <span class="lbl">Input</span>
+          <div class="content" id="inputField">Animal a evaluar</div>
+        </div>
+        <div class="arrow proc">
+          <span class="lbl">Algoritmo</span>
+          <div class="content" id="procField" contenteditable="true"></div>
+        </div>
+        <div class="arrow out">
+          <span class="lbl">Output</span>
+          <div class="content" id="outputField">Sí / No</div>
+        </div>
+      </div>
+      <div class="comic-foot">
+        <span class="comic-mark">#LaMejorMascota</span>
+        <span class="comic-mark" id="footNombre" contenteditable="true">Nombre: _________</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button class="action" id="resetBtn">Reiniciar</button>
+    <button class="action download" id="downloadBtn">⭳ Descargar como imagen</button>
+  </div>
+
+  <div class="test-panel">
+    <h3 class="test-title">Probá tu algoritmo</h3>
+    <div class="test-table" id="testTable">
+      <div class="test-header">
+        <span>Animal</span>
+        <span>¿Cumple?</span>
+        <span></span>
+      </div>
+    </div>
+    <button class="add-row-btn" id="addRowBtn">+ agregar fila</button>
+  </div>
+
+  <footer class="sig">cartón digital · hecho para jugarse en clase</footer>
+</div>
+
+<script src="../Js/mejor-mascota-script.js"></script>
+</body>
+</html>

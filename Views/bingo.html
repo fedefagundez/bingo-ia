@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La Vaca de apartamento - Bingo IA</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../Style/styles.css">
+</head>
+<body>
+
+<div class="wrap">
+  <header class="top">
+    <div class="brand">La Vaca <span class="ia">IA</span></div>
+    <div class="tagline">Plan Ceibal · Fundación Sadosky · Program.AR</div>
+  </header>
+
+  <!-- SELECTOR -->
+  <section id="selector">
+    <p class="prompt">Elegí tu cartón
+      <span>Cada cartón tiene consignas distintas. Buscá en el grupo quién hizo cada cosa y anotá su nombre.</span>
+    </p>
+    <div class="tickets" id="tickets"></div>
+  </section>
+
+  <!-- CARD VIEW -->
+  <section id="cardview">
+    <div class="card-header">
+      <button class="back-btn" id="backBtn">← volver al inicio</button>
+      <div style="text-align:right;">
+        <div class="card-title" id="cardTitle">Bingo IA</div>
+        <div class="card-num" id="cardNum">Cartón N° 0000000</div>
+      </div>
+    </div>
+
+    <div class="board" id="board">
+      <div class="grid3" id="grid"></div>
+    </div>
+
+    <div class="board-foot">
+      <span class="progress-label" id="progressLabel">0 / 9 completados</span>
+      <button class="reset-btn" id="resetBtn">Reiniciar cartón</button>
+    </div>
+
+    <div class="bingo-banner" id="bingoBanner">¡Bingo! Completaste una línea 🎉</div>
+  </section>
+
+  <footer class="sig">cartón digital · hecho para jugarse en clase</footer>
+</div>
+
+<script src="../Js/script.js"></script>
+
+</body>
+</html>
